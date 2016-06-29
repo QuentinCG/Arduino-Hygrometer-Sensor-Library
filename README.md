@@ -3,7 +3,7 @@
 ## What is it?
 
 This library (with examples) is designed to be integrated in projects using any kind of RainDrop sensors (analog or/and digital).
-It retrieves analog/digital value from the sensor and conclude if it is raining or not.
+It retrieves analog/digital value from the sensor and gives rain status.
 
 
 ## How to install
@@ -12,14 +12,14 @@ It retrieves analog/digital value from the sensor and conclude if it is raining 
 
 2) On your Arduino IDE, click "Sketch" menu and then "Include Library > Add .ZIP Libraries"
 
-3) You can now use the library on your project on launch an example ("File > Examples")
+3) You can now use the library for your project or launch an example ("File > Examples")
 
 
-## How to connect Raindrop sensor to arduino
+## How to connect Raindrop sensor to your Arduino
 
 Most Rain drop sensors have an analog and/or a digital output.
 
-They behave the same way:
+All rain drop sensors behave the same way:
 
 Raindrop Sensor  | Arduino
 -------- |  --------
@@ -30,7 +30,7 @@ D0       | D2 (or any other digital pin)
 
 <img src="schematics.png" width="400">
 
-(<a target="_blank" href="http://henrysbench.capnfatz.com/henrys-bench/arduino-sensors-and-input/arduino-rain-sensor-module-guide-and-tutorial/">Image source</a>)
+(<a target="_blank" href="http://henrysbench.capnfatz.com/henrys-bench/arduino-sensors-and-input/arduino-rain-sensor-module-guide-and-tutorial/">Source image</a>)
 
 
 ## Examples
@@ -51,4 +51,4 @@ This project is under MIT license. This means you can use it as you want (just d
 
 ## Contribute
 
-If you want to add more examples or improve the library, just push your change with proper commit message and right wrapping.
+If you want to add more examples or improve the library, just create a pull request with proper commit message and right wrapping.
