@@ -5,13 +5,21 @@
  * \date 29 June 2016
  * \license MIT License (contact me if too restrictive)
  * \copyright Copyright (c) 2016 Quentin Comte-Gaz
- * \version 1.0
+ * \version 1.1
+ *
+ * \history
+ *  - v1.0 Main design of the library
+ *  - v1.1 Add Arduino < 1.0 compatibility
  */
 
 #ifndef RainDropSensor_h
 #define RainDropSensor_h
 
+#if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
+#else
+#include "WProgram.h"
+#endif
 
 #define ANALOG_RAIN_DROP_MIN 0
 #define ANALOG_RAIN_DROP_MAX 1024
