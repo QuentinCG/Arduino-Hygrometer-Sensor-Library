@@ -47,7 +47,7 @@ class RainDropSensor
      *
      * \return (bool) True if raining
      */
-    bool isRaining();
+    bool isRaining() const;
 
     /*!
      * \brief readRainDropValue Get ANALOG output from rain drop sensor
@@ -56,7 +56,7 @@ class RainDropSensor
      *
      * \warning If the rain drop is digital, the return value will be ANALOG_IS_RAINING-1 if raining and ANALOG_IS_RAINING+1 if not raining.
      */
-    int readRainDropValue();
+    int readRainDropValue() const;
 
     /*!
      * \brief setAnalogParameters Set ANALOG output range and value considered as rain
@@ -76,7 +76,7 @@ class RainDropSensor
      * \param max[out] (int&) Maximum value for rain drop sensor range
      * \param is_raining[out] (int) Maximum value considered as raining
      */
-    void getAnalogParameters(int &min, int &max, int &is_raining);
+    void getAnalogParameters(int &min, int &max, int &is_raining) const;
 
   private:
     eRainDropKind _kind;

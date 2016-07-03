@@ -23,12 +23,12 @@ RainDropSensor::RainDropSensor(eRainDropKind kind, int pin)
   _is_raining = ANALOG_IS_RAINING;
 }
 
-bool RainDropSensor::isRaining()
+bool RainDropSensor::isRaining() const
 {
   return (readRainDropValue() < _is_raining);
 }
 
-int RainDropSensor::readRainDropValue()
+int RainDropSensor::readRainDropValue() const
 {
   int sensor_value = 0;
 
@@ -70,7 +70,7 @@ bool RainDropSensor::setAnalogParameters(int min, int max, int is_raining)
   return true;
 }
 
-void RainDropSensor::getAnalogParameters(int &min, int &max, int &is_raining)
+void RainDropSensor::getAnalogParameters(int &min, int &max, int &is_raining) const
 {
   min = _min;
   max = _max;
