@@ -5,6 +5,8 @@
 This library (with examples) is designed to be integrated in projects using any kind of RainDrop sensors (analog or/and digital).
 It retrieves analog/digital value from the sensor and gives rain status.
 
+<img src="device.png" width="300">
+
 
 ## How to install
 
