@@ -1,24 +1,28 @@
 /*
- * \brief Get rain information from Analog Rain drop sensor every second
+ * \brief Get humidity information from Analog Rain drop sensor (or moisture sensor) every second
  *
  * \author Quentin Comte-Gaz <quentin@comte-gaz.com>
- * \date 29 June 2016
+ * \date 19 July 2016
  * \license MIT License (contact me if too restrictive)
  * \copyright Copyright (c) 2016 Quentin Comte-Gaz
- * \version 1.0
+ * \version 2.0
+ *
+ * \history
+ *  - v1.0 Base
+ *  - v2.0 Adapt to new library
  */
 
-#include <RainDropSensor.h>
+#include <HygrometerSensor.h>
 
-// Create Analog rain drop sensor instance on A1 pin
-RainDropSensor analog_rain_drop(RainDropSensor::ANALOG, A1);
+// Create Analog rain drop sensor (or moisture sensor) instance on A1 pin
+HygrometerSensor analog_rain_drop(HygrometerSensor::ANALOG, A1);
 
 void setup(void)
 {
   Serial.begin(9600);
 
   // Set analog parameters (min value, max value, value to switch from "dry" to "is raining") (optional call)
-  if (!analog_rain_drop.setAnalogParameters(ANALOG_RAIN_DROP_MIN, ANALOG_RAIN_DROP_MAX, 800)) {
+  if (!analog_rain_drop.setAnalogParameters(ANALOG_HUMIDITY_MIN, ANALOG_HUMIDITY_MAX, 800)) {
     Serial.print("Error while setting Analog parameters\n");
   }
 
@@ -39,9 +43,9 @@ void loop()
   // Check rain state and value every sec
 
   Serial.print("Rain drop value: ");
-  Serial.print(analog_rain_drop.readRainDropValue());
+  Serial.print(analog_rain_drop.readHumidityValue());
   Serial.print(" (");
-  if (analog_rain_drop.isRaining()) {
+  if (analog_rain_drop.isHumid()) {
     Serial.print("raining");
   } else {
     Serial.print("dry");
