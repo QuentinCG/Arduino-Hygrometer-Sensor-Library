@@ -10,7 +10,7 @@ It retrieves analog/digital value from the sensor and gives the humidity status.
 
 ## How to install
 
-1) Download <a target="_blank" href="https://github.com/QuentinCG/Arduino-Hygrometer-Sensor-Library/releases/download/1.0.0/HygrometerSensor_v2_0_0.zip">latest release</a>
+1) Download <a target="_blank" href="https://github.com/QuentinCG/Arduino-Hygrometer-Sensor-Library/releases/download/2.0.0/HygrometerSensor_v2_0_0.zip">latest release</a>
 
 2) On your Arduino IDE, click "Sketch" menu and then "Include Library > Add .ZIP Libraries"
 
