@@ -61,6 +61,11 @@ int HygrometerSensor::readHumidityValue() const
   return sensor_value;
 }
 
+int HygrometerSensor::readPercentageHumidity() const
+{
+  return (int)(100 * (float)((float) (_max - readHumidityValue()) / (float) (_max - _min)));
+}
+
 bool HygrometerSensor::setAnalogParameters(int min, int max, int is_humid)
 {
   if (min >= max || is_humid >= max || is_humid <= min) {

@@ -44,7 +44,9 @@ void loop()
 
   Serial.print("Rain drop value: ");
   Serial.print(analog_rain_drop.readHumidityValue());
-  Serial.print(" (");
+  Serial.print(" which means ");
+  Serial.print(analog_rain_drop.readPercentageHumidity());
+  Serial.print("% (");
   if (analog_rain_drop.isHumid()) {
     Serial.print("raining");
   } else {

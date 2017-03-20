@@ -60,6 +60,15 @@ class HygrometerSensor
     int readHumidityValue() const;
 
     /*!
+     * \brief readPercentageHumidity Get humidity percentage from hygrometer sensor
+     *
+     * \return (int) Humidity percentage
+     *
+     * \warning If the sensor is digital, the return value will be inconsistent values
+     */
+     int readPercentageHumidity() const;
+
+    /*!
      * \brief setAnalogParameters Set ANALOG output range and value considered as humid
      *
      * \param min (int) Minimum value for sensor range (default: ANALOG_HUMIDITY_MIN)
