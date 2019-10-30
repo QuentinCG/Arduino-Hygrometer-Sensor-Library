@@ -38,10 +38,10 @@ All rain drop sensors behave the same way:
 Two examples are provided with this library:
 
 ### Read digital value from sensor
-<a target="_blank" href="https://github.com/QuentinCG/Arduino-Hygrometer-Sensor-Library/blob/master/HygrometerSensor/examples/DigitalHygrometer/DigitalHygrometer.ino">Link to source code</a>
+<a target="_blank" href="https://github.com/QuentinCG/Arduino-Hygrometer-Sensor-Library/blob/master/examples/DigitalHygrometer/DigitalHygrometer.ino">Link to source code</a>
 
 ### Read analog value from sensor
-<a target="_blank" href="https://github.com/QuentinCG/Arduino-Hygrometer-Sensor-Library/blob/master/HygrometerSensor/examples/AnalogHygrometer/AnalogHygrometer.ino">Link to source code</a>
+<a target="_blank" href="https://github.com/QuentinCG/Arduino-Hygrometer-Sensor-Library/blob/master/examples/AnalogHygrometer/AnalogHygrometer.ino">Link to source code</a>
 
 ## License
 
