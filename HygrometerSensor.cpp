@@ -2,9 +2,9 @@
  * \brief Get humidity information from Rain drop or soil moisture sensor (implementation)
  *
  * \author Quentin Comte-Gaz <quentin@comte-gaz.com>
- * \date 19 July 2016
+ * \date 27 December 2021
  * \license MIT License (contact me if too restrictive)
- * \copyright Copyright (c) 2016 Quentin Comte-Gaz
+ * \copyright Copyright (c) 2021 Quentin Comte-Gaz
  * \version 2.0
  *
  * \history
@@ -19,9 +19,11 @@ HygrometerSensor::HygrometerSensor(eHygrometerKind kind, int pin)
   _kind = kind;
   _pin = pin;
 
-  if (_kind == DIGITAL) {
+  if (_kind == DIGITAL)
+  {
     pinMode(pin, INPUT);
   }
+
   _min = ANALOG_HUMIDITY_MIN;
   _max = ANALOG_HUMIDITY_MAX;
   _is_humid = ANALOG_IS_HUMID;
@@ -40,21 +42,27 @@ int HygrometerSensor::readHumidityValue() const
   {
       case ANALOG:
         sensor_value = analogRead(_pin);
-      break;
+        break;
       case DIGITAL:
-        if (digitalRead(_pin)) {
+        if (digitalRead(_pin))
+        {
           sensor_value = _is_humid + 1;
-        } else {
+        }
+        else
+        {
           sensor_value = _is_humid - 1;
         }
-      break;
+        break;
       default:
-      break;
+        break;
   }
 
-  if (sensor_value > _max) {
+  if (sensor_value > _max)
+  {
     sensor_value = _max;
-  } else if (sensor_value < _min) {
+  }
+  else if (sensor_value < _min)
+  {
     sensor_value = _min;
   }
 
@@ -68,7 +76,8 @@ int HygrometerSensor::readPercentageHumidity() const
 
 bool HygrometerSensor::setAnalogParameters(int min, int max, int is_humid)
 {
-  if (min >= max || is_humid >= max || is_humid <= min) {
+  if (min >= max || is_humid >= max || is_humid <= min)
+  {
     return false;
   }
 
