@@ -2,9 +2,9 @@
  * \brief Get humidity information from Digital Rain drop sensor (or moisture sensor) every second
  *
  * \author Quentin Comte-Gaz <quentin@comte-gaz.com>
- * \date 19 July 2016
+ * \date 27 December 2021
  * \license MIT License (contact me if too restrictive)
- * \copyright Copyright (c) 2016 Quentin Comte-Gaz
+ * \copyright Copyright (c) 2021 Quentin Comte-Gaz
  * \version 2.0
  *
  * \history
@@ -27,9 +27,12 @@ void loop()
   // Check rain state every sec
 
   Serial.print("Rain drop state: ");
-  if (analog_rain_drop.isHumid()) {
+  if (analog_rain_drop.isHumid())
+  {
     Serial.print("Raining");
-  } else {
+  }
+  else
+  {
     Serial.print("Dry");
   }
   Serial.print("\n");
