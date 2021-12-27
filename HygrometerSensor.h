@@ -2,9 +2,9 @@
  * \brief Get humidity information from Hygrometer sensor (Rain drop or soil moisture sensor)
  *
  * \author Quentin Comte-Gaz <quentin@comte-gaz.com>
- * \date 19 July 2016
+ * \date 27 December 2021
  * \license MIT License (contact me if too restrictive)
- * \copyright Copyright (c) 2016 Quentin Comte-Gaz
+ * \copyright Copyright (c) 2021 Quentin Comte-Gaz
  * \version 2.0
  *
  * \history
@@ -30,10 +30,10 @@ class HygrometerSensor
 {
   public:
 
-  enum eHygrometerKind {
-    ANALOG,
-    DIGITAL
-  };
+    enum eHygrometerKind {
+      ANALOG,
+      DIGITAL
+    };
 
     /*!
      * \brief HygrometerSensor Initialize Hygrometer sensor
@@ -97,4 +97,3 @@ class HygrometerSensor
 };
 
 #endif //HygrometerSensor_h
-
