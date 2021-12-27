@@ -2,9 +2,9 @@
  * \brief Get humidity information from Analog Rain drop sensor (or moisture sensor) every second
  *
  * \author Quentin Comte-Gaz <quentin@comte-gaz.com>
- * \date 19 July 2016
+ * \date 27 December 2021
  * \license MIT License (contact me if too restrictive)
- * \copyright Copyright (c) 2016 Quentin Comte-Gaz
+ * \copyright Copyright (c) 2021 Quentin Comte-Gaz
  * \version 2.0
  *
  * \history
@@ -22,7 +22,8 @@ void setup(void)
   Serial.begin(9600);
 
   // Set analog parameters (min value, max value, value to switch from "dry" to "is raining") (optional call)
-  if (!analog_rain_drop.setAnalogParameters(ANALOG_HUMIDITY_MIN, ANALOG_HUMIDITY_MAX, 800)) {
+  if (!analog_rain_drop.setAnalogParameters(ANALOG_HUMIDITY_MIN, ANALOG_HUMIDITY_MAX, 800))
+  {
     Serial.print("Error while setting Analog parameters\n");
   }
 
@@ -47,12 +48,15 @@ void loop()
   Serial.print(" which means ");
   Serial.print(analog_rain_drop.readPercentageHumidity());
   Serial.print("% (");
-  if (analog_rain_drop.isHumid()) {
+  if (analog_rain_drop.isHumid())
+  {
     Serial.print("raining");
-  } else {
+  }
+  else
+  {
     Serial.print("dry");
   }
-  Serial.print(")\n");
 
+  Serial.print(")\n");
   delay(1000);
 }
